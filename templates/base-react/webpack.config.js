@@ -6,9 +6,14 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 const config = (devMode) => ({
-    entry: "./src/index.html",
+    entry: "./src/js/index.js",
     module: {
         rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {loader: "babel-loader"}
+            },
             {
                 test: /\.html$/,
                 use: { loader: 'html-loader' }
