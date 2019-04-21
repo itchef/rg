@@ -15,7 +15,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          run: npm install
+          command: npm install
           working_directory: ./templates/base-react
 
       - run:
