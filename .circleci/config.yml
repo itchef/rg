@@ -12,15 +12,16 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-
-      - run:
-          name: Goto react base template
-          command: cd ./templates/base-react
 
-      - run: npm install
+      - run:
+          name: Install dependencies
+          run: npm install
+          working_directory: ./templates/base-react
 
       - run:
           name: Build Base-React in production mode
           command: npm run build
+          working_directory: ./templates/base-react
 
       - store_artifacts:
-          path: dist/
+          path: ./templates/base-react/dist/
