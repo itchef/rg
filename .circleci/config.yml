@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node:9.9.0
 
-    working_directory: ~/rg/templates/base-react
+    working_directory: ~/rg
 
     steps:
       - checkout
@@ -12,10 +12,9 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-
-
       - run:
-          name: List current dir
-          command: pwd && ls -al
+          name: Goto react base template
+          command: cd ./templates/base-react
 
       - run: npm install
 
