@@ -1,16 +1,17 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import App from '.';
 
 describe('<App />', () => {
-    let wrapper;
-    beforeEach(() => {
-        wrapper = shallow(<App />)
-    });
-    it('should render successfully', () => {
-        expect(wrapper).toBeTruthy();
-    });
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+  it('should render successfully', () => {
+    expect(wrapper).toBeTruthy();
+  });
 
-    it('should have component message', function() {
-        expect(wrapper.find('.app__wrapper').text()).toEqual('Base App Created.');
-    });
+  it('should have component message', () => {
+    expect(wrapper.find('.app__wrapper').text()).toEqual('Base App Created.');
+  });
 });

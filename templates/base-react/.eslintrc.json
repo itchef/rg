@@ -8,7 +8,7 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/no-extraneous-dependencies": [
-      "error", {"devDependencies": ["./src/setupTests.js", "./src/**/*.test.js"]}
+      "error", {"devDependencies": ["./src/setupTests.js", "**/*.test.js"]}
     ]
   }
 }
