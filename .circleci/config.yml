@@ -19,6 +19,11 @@ jobs:
           working_directory: ./templates/base-react
 
       - run:
+          name: Run lint
+          command: npm run lint
+          working_directory: ./templates/base-react
+
+      - run:
           name: Build Base-React in production mode
           command: npm run build
           working_directory: ./templates/base-react
