@@ -3,6 +3,9 @@
     "browser": true,
     "jest": true
   },
+  "globals": {
+    "shallow": true
+  },
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
