@@ -11,7 +11,8 @@
     "test:watch": "jest --watch",
     "pretty": "prettier --check 'src/**/*.js'",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "lint:fix": "eslint src --fix",
+    "lint:styles": "stylelint 'src/**/*.scss'"
   },
   "keywords": [
     "React",
@@ -48,7 +49,9 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "enzyme-to-json": "^3.3.5",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-recommended": "^2.2.0"
   },
   "dependencies": {
     "react": "^16.8.6",

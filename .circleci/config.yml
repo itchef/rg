@@ -24,6 +24,11 @@ jobs:
           working_directory: ./templates/base-react
 
       - run:
+          name: Run stylelint
+          command: npm run lint:styles
+          working_directory: ./templates/base-react
+
+      - run:
           name: Run unit test
           command: npm run test:coverage
           working_directory: ./templates/base-react
