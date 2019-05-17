@@ -10,7 +10,7 @@ describe('<App />', () => {
     expect(wrapper).toBeTruthy();
   });
 
-  it('should contains logo', function() {
+  it('should contains logo', () => {
     expect(wrapper.find('.app__content img')).toBeDefined();
   });
 
