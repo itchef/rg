@@ -10,7 +10,11 @@ describe('<App />', () => {
     expect(wrapper).toBeTruthy();
   });
 
-  it('should have component message', () => {
-    expect(wrapper.find('.app__wrapper').text()).toEqual('Base App Created.');
+  it('should contains logo', function() {
+    expect(wrapper.find('.app__content img')).toBeDefined();
+  });
+
+  it('should have footer message', () => {
+    expect(wrapper.find('.app__footer').text()).toEqual('Your app has been created. To know more visit rg-cli.');
   });
 });
